@@ -1,0 +1,49 @@
+D.
+1. Git help gives a list of common git commands and their descriptions
+2. Git help -ag gives a list of available subcommands and some concept guides
+
+E. 
+1. These commands are setting your username and email for when/if you commit to git
+2. The purpose of --global is to set your configs for every directory across your system. If you are working on a shared computer, for instance, you would not use --global
+
+F. 
+1. You can see hidden files by typing "defaults write com.apple.finder AppleShowAllFiles YES" in terminal and relaunching Finder
+2. No
+4. A hidden folder named .git
+5. The directory would stop being managed by git
+6. Search the old project for a hidden folder named .git, and if none exists, you know the folder is not being managed using git
+
+G.
+1. Git status displays which files are untracked/changed, what branch you are on, and what files are to be committed
+2. It tracks names.txt 
+3. It commits the file to the local repository with that message
+4. Git add . tracks everything that is currently untracked
+5. Git commit without the -m takes us to vim to manualy enter a commit message
+6. Git commit without the -m because we can enter a multi-line commit message in vim
+7. It shows a history of your commits
+
+H.
+1. Staged - names.txt : this refers to changed files to be commited
+   Unstaged - movies.txt : this refers to changed files that are not staged to be commited
+   Untracked - books.txt : this refers to files not tracked by git
+
+2. git commit will commit only names.txt to the local repo.
+3. to stage changes, run git add
+4. to unstage changes, run git rm --cached names.txt
+1. git diff displayed changes in unstaged files
+2. git diff --cached displays changes in staged files
+3. git rm --cached names.txt
+   git add movies.txt
+4. The old version of movies.txt is staged while the current version has not been added to the repo and is unstaged
+5. It is displayed in the staging area listed as a deleted file
+6. movies.txt is listed in the unstaged changes as deleted. The old version is listed in the staging area as modified and the new version is listed as an untracked file.
+7. git add .
+   git commit -m "part h"
+8. index, cache and stage all refer to the staging area, which stores all of the changes ready to be commited.
+9. It allows you to make a number of changes without having to put unfished features in a project's working version.
+
+I.
+1. git reset --soft "HEAD^" undoes the latest commit
+2. git reset --hard "HEAD^" undoes the latest commit and removes all of the changes from the staging area.
+3. HEAD refers to your current branch the version tree
+4. HEAD^ refers to the branch before the HEAD
